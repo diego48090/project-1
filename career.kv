@@ -1,0 +1,24 @@
+<CareerSimulator>:
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+    Spinner:
+        id: role_spinner
+        text: 'Attaccante'
+        values: ['Attaccante', 'Centrocampista', 'Difensore', 'Portiere']
+        on_text: root.role = self.text
+
+    Button:
+        text: 'Inizia la tua carriera'
+        on_release: root.start_career()
+
+    Button:
+        text: 'Simula prossimi due anni'
+        on_release: root.choose_team()
+
+    Label:
+        text: root.result_text
+        text_size: self.width, None
+        halign: 'left'
+        valign: 'top'
